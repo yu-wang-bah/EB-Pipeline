@@ -32,6 +32,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.sonar-plugins.java</groupId>
+            <artifactId>sonar-jacoco-listeners</artifactId>
+            <version>3.2</version>
+            <scope>test</scope>
+        </dependency>
         <!-- end::tests[] -->
     </dependencies>
 
@@ -56,6 +62,17 @@
                         <configuration>
                             <!-- Sets the VM argument line used when integration tests are run. -->
                             <argLine>${failsafeArgLine}</argLine>
+                            <!-- Specific to generate mapping between tests and covered code -->
+                            <properties>
+                                <property>
+                                    <name>listener</name>
+                                    <value>org.sonar.java.jacoco.JUnitListener</value>
+                                </property>
+                            </properties>
+                            <!-- Let's put failsafe reports with surefire to have access to tests 
+                                failures/success reports in sonar -->
+                            <reportsDirectory>${project.build.directory}/surefire-reports
+                            </reportsDirectory>
                             <!--
                                 Skips integration tests if the value of skip.integration.tests property
                                 is true
@@ -71,6 +88,13 @@
                 <configuration>
                     <!-- Sets the VM argument line used when unit tests are run. -->
                     <argLine>${surefireArgLine}</argLine>
+                     <!-- Specific to generate mapping between tests and covered code -->
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>org.sonar.java.jacoco.JUnitListener</value>
+                        </property>
+                    </properties>
                     <!-- Skips unit tests if the value of skip.unit.tests property is true -->
                     <skipTests>${skip.unit.tests}</skipTests>
                     <!-- Excludes integration tests when unit tests are run. -->
