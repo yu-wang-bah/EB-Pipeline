@@ -27,7 +27,6 @@ public class Application extends SpringBootServletInitializer{
         return args -> {
 
             System.out.println("Let's inspect the beans provided by Spring Boot:");
-            System.out.println("this line should annoy sonarqube, haha");
 
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
