@@ -28,6 +28,8 @@ public class Application extends SpringBootServletInitializer{
 
             System.out.println("Let's inspect the beans provided by Spring Boot:");
 
+            System.out.println("adding more sys out");
+
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);
             for (String beanName : beanNames) {
