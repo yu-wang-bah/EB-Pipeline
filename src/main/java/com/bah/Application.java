@@ -1,4 +1,4 @@
-package hello;
+package com.bah;
 
 import java.util.Arrays;
 
@@ -27,8 +27,6 @@ public class Application extends SpringBootServletInitializer{
         return args -> {
 
             System.out.println("Let's inspect the beans provided by Spring Boot:");
-
-            System.out.println("adding more sys out");
 
             String[] beanNames = ctx.getBeanDefinitionNames();
             Arrays.sort(beanNames);

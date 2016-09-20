@@ -33,6 +33,11 @@
             <scope>test</scope>
         </dependency>
         <!-- end::tests[] -->
+        <dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-configuration-processor</artifactId>
+        	<optional>true</optional>
+        </dependency>
     </dependencies>
 
     <properties>
