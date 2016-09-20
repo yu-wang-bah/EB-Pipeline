@@ -97,6 +97,9 @@
                                 for JaCoCo runtime agent.
                             -->
                             <propertyName>surefireArgLine</propertyName>
+                            <excludes>
+		                        <exclude>**/*IT.java</exclude>
+		                    </excludes>
                         </configuration>
                     </execution>
                     <!--
