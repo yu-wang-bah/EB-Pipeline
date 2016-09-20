@@ -11,10 +11,9 @@ public class ClientRepositoryImpl implements ClientRepository {
 
 	@Override
 	public Optional<Client> findByName(String name) {
-		Client client = new Client("John");
 		
-		save(client);
-		return Optional.of(client);
+		//simulate that there is no recode in the database that matches the name that is passed in
+		return Optional.empty();
 	}
 
 	@Override
