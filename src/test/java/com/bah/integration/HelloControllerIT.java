@@ -1,4 +1,4 @@
-package com.bah.web;
+package com.bah.integration;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
