@@ -53,12 +53,12 @@ public class ClientControllerTest {
 			        .andExpect(jsonPath("$.number", notNullValue()));
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		}
@@ -73,12 +73,12 @@ public class ClientControllerTest {
 			    .andExpect(status().isBadRequest());
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		}
@@ -95,12 +95,12 @@ public class ClientControllerTest {
 			    .andExpect(status().isConflict());
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class");
+			logger.error("Error happened in the ClientControllerTest class", e);
 
 			e.printStackTrace();
 		}
