@@ -33,9 +33,8 @@ public class HelloControllerTest {
 			        .andExpect(status().isOk())
 			        .andExpect(content().string(equalTo("Greetings from Spring Boot Shawn!")));
 		} catch (Exception e) {
-			logger.error("Error happened in the HelloControllerTest class");
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("Error happened in the HelloControllerTest class", e);
+
 		}
     }
 }
