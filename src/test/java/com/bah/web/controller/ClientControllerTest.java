@@ -55,12 +55,10 @@ public class ClientControllerTest {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
 
-			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
 
-			e.printStackTrace();
 		}
     }
 
@@ -75,12 +73,9 @@ public class ClientControllerTest {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
 
-			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
-
-			e.printStackTrace();
 		}
     }
 
@@ -97,12 +92,9 @@ public class ClientControllerTest {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
 
-			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			logger.error("Error happened in the ClientControllerTest class", e);
-
-			e.printStackTrace();
 		}
     }
 }
