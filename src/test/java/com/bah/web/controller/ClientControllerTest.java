@@ -8,6 +8,8 @@ import com.bah.service.exception.ClientNameAlreadyExistsException;
 import com.bah.web.to.CreateClientRequest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -34,6 +36,9 @@ public class ClientControllerTest {
 
     @Autowired
     ObjectMapper objectMapper;
+    
+    
+    private static final Logger logger = LoggerFactory.getLogger(ClientControllerTest.class);
 
     @Test
     public void testCreateClientSuccessfully() {
@@ -48,9 +53,13 @@ public class ClientControllerTest {
 			        .andExpect(jsonPath("$.number", notNullValue()));
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		}
     }
@@ -64,9 +73,13 @@ public class ClientControllerTest {
 			    .andExpect(status().isBadRequest());
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		}
     }
@@ -82,9 +95,13 @@ public class ClientControllerTest {
 			    .andExpect(status().isConflict());
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			logger.error("Error happened in the ClientControllerTest class");
+
 			e.printStackTrace();
 		}
     }

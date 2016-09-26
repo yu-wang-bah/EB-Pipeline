@@ -6,6 +6,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +23,8 @@ public class HelloControllerTest {
 
     @Autowired
     private MockMvc mvc;
+    
+    private static final Logger logger = LoggerFactory.getLogger(HelloControllerTest.class);
 
     @Test
     public void getHello() {
@@ -29,6 +33,7 @@ public class HelloControllerTest {
 			        .andExpect(status().isOk())
 			        .andExpect(content().string(equalTo("Greetings from Spring Boot Shawn!")));
 		} catch (Exception e) {
+			logger.error("Error happened in the HelloControllerTest class");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
