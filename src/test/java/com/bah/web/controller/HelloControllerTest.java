@@ -31,7 +31,7 @@ public class HelloControllerTest {
         try {
 			mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 			        .andExpect(status().isOk())
-			        .andExpect(content().string(equalTo("Welcome to devop pipeline demo using cloud!")));
+			        .andExpect(content().string(equalTo("Welcome to devops pipeline demo using cloud!")));
 		} catch (Exception e) {
 			logger.error("Error happened in the HelloControllerTest class", e);
 
