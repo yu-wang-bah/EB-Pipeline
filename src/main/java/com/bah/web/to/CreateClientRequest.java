@@ -12,6 +12,7 @@ public class CreateClientRequest {
     }
 
     public CreateClientRequest() {
+    	
     }
 
     public String getName() {

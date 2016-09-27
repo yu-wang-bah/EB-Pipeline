@@ -57,7 +57,7 @@ public class ClientControllerTest {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class", e);
+			logger.error("Unknown exception happened", e);
 
 		}
     }
@@ -75,7 +75,7 @@ public class ClientControllerTest {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class", e);
+			logger.error("Unknown exception happened", e);
 		}
     }
 
@@ -94,7 +94,7 @@ public class ClientControllerTest {
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			logger.error("Error happened in the ClientControllerTest class", e);
+			logger.error("Unknown exception happened", e);
 		}
     }
 }
