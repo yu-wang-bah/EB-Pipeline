@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
     
-	public static String greeting = "Greetings from Spring Boot!";
+	public static final String greeting = "Welcome to devop pipeline demo using cloud!";
 	
     @RequestMapping("/")
     public String index() {
