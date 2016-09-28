@@ -49,6 +49,6 @@ public class HelloControllerIT {
     public void getHello() {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
-        assertThat(response.getBody(), equalTo("Welcome to devops pipeline demo using cloud, have a nice day!"));
+        assertThat(response.getBody(), equalTo("Welcome to devops pipeline demo using cloud!"));
     }
 }
